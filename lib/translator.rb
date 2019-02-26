@@ -2,8 +2,8 @@ require "pry"
 require "yaml"
 
 def load_library(file_path)
-  # binding.pry
-  emoticon_result = {}
+  
+  
   emoticons = YAML.load_file(file_path)
   emoticon_result = {"get_emoticon" =>{}, "get_meaning" => {}}
   
@@ -17,7 +17,7 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   emoticon_library = load_library(file_path)
-  # binding.pry
+
   if emoticon_library["get_emoticon"][emoticon]
     emoticon_library["get_emoticon"][emoticon]
   else
